@@ -1,0 +1,332 @@
+/* Global  -------------------------------------------------------- */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  color: #515151;
+}
+
+/* Banner  -------------------------------------------------------- */
+
+.banner {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/img-hero-banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(50%);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.title {
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.9);
+}
+
+.subtitle {
+  font-size: 16px;
+}
+
+/* Text Section -------------------------------------------------------- */
+
+.container {
+  padding: 30px;
+  padding-left: 112px;
+  padding-right: 112px;
+}
+
+.title2 {
+  text-align: center;
+}
+.breadcrumbs {
+  display: flex;
+  gap: 10px;
+}
+
+.crumb.separator,
+.crumb.left {
+  color: gray;
+}
+
+.main-text p {
+  text-align: center;
+}
+
+.image-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.image {
+  width: 50%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.text {
+  width: 48%;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #21ba9e;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7bcbbb;
+}
+
+.hidden {
+  display: none;
+}
+
+.solar-body .additional-info {
+  margin-top: 20px;
+}
+
+.solar-body .additional-info > div {
+  margin-bottom: 20px;
+}
+
+.solar-body .additional-info h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #004d40;
+}
+
+.solar-body .additional-info p {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.financing-options {
+  padding-bottom: 12px;
+}
+
+/* Discover -------------------------------------------------------- */
+
+.discover {
+  background-color: #051146;
+  color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+/* Services -------------------------------------------------------- */
+
+#services,
+#moreServices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+  padding-left: 112px;
+  padding-right: 112px;
+}
+
+.service-item {
+  flex: 0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.service-image {
+  width: 100%;
+  height: 25vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.service-title {
+  margin: 0;
+  padding-top: 10px;
+}
+
+.service-p {
+  font-size: 14px;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.services-button-container {
+  display: none;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Footer --------------------------------------------------------  */
+
+.custom-footer {
+  position: relative;
+  height: 50vh;
+  padding-left: 112px;
+  padding-right: 112px;
+}
+
+.custom-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/img-final-cta-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(50%);
+  z-index: 1;
+}
+
+.custom-footer-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  z-index: 2;
+}
+
+.custom-footer-text {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.custom-title {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.custom-description {
+  color: white;
+  font-size: 16px;
+}
+
+.custom-footer-button {
+  width: 30%;
+}
+
+.custom-button {
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 2px solid teal;
+  color: black;
+  background: white;
+  padding: 10px 20px;
+}
+
+.custom-button:hover {
+  background-color: teal;
+  color: white;
+}
+
+/* Responsive -------------------------------------------------------- */
+
+/* Smartphones (portrait) */
+@media only screen and (max-width: 390px) {
+  /* Text Section -------------------------------------------------------- */
+
+  .image-content {
+    display: block;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .image {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .text {
+    width: 100%;
+  }
+  .container {
+    padding: 30px;
+  }
+
+  /* Discover -------------------------------------------------------- */
+
+  .discover {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /* Services -------------------------------------------------------- */
+
+  #services {
+    display: block;
+    padding: 30px;
+    padding-bottom: 0px;
+  }
+
+  #moreServices {
+    display: none;
+    padding: 30px;
+    padding-top: 0px;
+  }
+
+  .service-item {
+    min-width: 100%;
+    padding-bottom: 25px;
+  }
+
+  .service-image {
+    width: 100%;
+  }
+
+  .services-button-container {
+    display: block;
+    justify-content: center;
+  }
+
+  /* Footer -------------------------------------------------------- */
+
+  .custom-footer {
+    position: relative;
+    height: 50vh;
+    padding: 30px;
+  }
+}
