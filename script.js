@@ -1,3 +1,4 @@
+// See Less/More functionality for text section on all screens
 document.getElementById("toggleButton").addEventListener("click", function () {
   var extraContent = document.getElementById("extraContent");
   var button = document.getElementById("toggleButton");
@@ -10,6 +11,7 @@ document.getElementById("toggleButton").addEventListener("click", function () {
   }
 });
 
+// See Less/More functionality for services on mobile screens
 document
   .getElementById("servicesToggleButton")
   .addEventListener("click", function () {
@@ -150,14 +152,13 @@ document.addEventListener("DOMContentLoaded", function () {
     return svg;
   }
 
-  // Append SVG to each afford-card-item
   document.querySelectorAll(".afford-card-item").forEach((item) => {
     const icon = createSVG();
-    item.prepend(icon); // Prepend the SVG to each item
+    item.prepend(icon);
   });
 });
 
-// Add SVG circle down icon to items in Affordable Energy Section to avoid code redunduncy
+// Add SVG circle down icon to items in FAQ Section to avoid code redunduncy
 document.addEventListener("DOMContentLoaded", function () {
   // Function to return the SVG element
   function createSVG() {
@@ -190,9 +191,9 @@ document.addEventListener("DOMContentLoaded", function () {
     return svg;
   }
 
-  // Append SVG to each afford-card-item
+  // Prepend SVG to each afford-card-item
   document.querySelectorAll(".faq-item").forEach((item) => {
     const icon = createSVG();
-    item.prepend(icon); // Prepend the SVG to each item
+    item.prepend(icon); 
   });
 });

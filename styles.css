@@ -221,9 +221,8 @@ button:hover {
 .afford-card {
   position: absolute;
   right: 70px;
-  bottom: 80px;
+  bottom: 70px;
   z-index: 1;
-
   padding: 20px;
   text-align: center;
   background-color: white;
