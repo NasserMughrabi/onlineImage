@@ -88,7 +88,7 @@ const services = [
   },
 ];
 
-function createComponent(title, description, imageURL, index) {
+function createServiceComponent(title, description, imageURL, index) {
   const component = document.createElement("div");
   component.className = "service-item";
   component.innerHTML = `<div
@@ -106,13 +106,93 @@ function createComponent(title, description, imageURL, index) {
   }
 }
 
-// var i = 0;
-// services.forEach((service) => {
-//   createComponent(service.title, service.description, service.imageURL, i);
-//   i += 1;
-// });
-
 for (var i = 0; i < services.length; i++) {
   var service = services[i];
-  createComponent(service.title, service.description, service.imageURL, i);
+  createServiceComponent(
+    service.title,
+    service.description,
+    service.imageURL,
+    i
+  );
 }
+
+// Add SVG checkmark icon to items in Affordable Energy Section to avoid code redunduncy
+document.addEventListener("DOMContentLoaded", function () {
+  // Function to return the SVG element
+  function createSVG() {
+    const svgNamespace = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNamespace, "svg");
+    svg.setAttribute("class", "afford-icon");
+    svg.setAttribute("width", "20");
+    svg.setAttribute("height", "20");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("fill", "none");
+
+    const path1 = document.createElementNS(svgNamespace, "path");
+    path1.setAttribute("d", "M16.125 9.75L10.625 15L7.875 12.375");
+    path1.setAttribute("stroke", "#21BA9E");
+    path1.setAttribute("stroke-width", "2");
+    path1.setAttribute("stroke-linecap", "round");
+    path1.setAttribute("stroke-linejoin", "round");
+    svg.appendChild(path1);
+
+    const path2 = document.createElementNS(svgNamespace, "path");
+    path2.setAttribute(
+      "d",
+      "M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+    );
+    path2.setAttribute("stroke", "#21BA9E");
+    path2.setAttribute("stroke-width", "2");
+    path2.setAttribute("stroke-linecap", "round");
+    path2.setAttribute("stroke-linejoin", "round");
+    svg.appendChild(path2);
+
+    return svg;
+  }
+
+  // Append SVG to each afford-card-item
+  document.querySelectorAll(".afford-card-item").forEach((item) => {
+    const icon = createSVG();
+    item.prepend(icon); // Prepend the SVG to each item
+  });
+});
+
+// Add SVG circle down icon to items in Affordable Energy Section to avoid code redunduncy
+document.addEventListener("DOMContentLoaded", function () {
+  // Function to return the SVG element
+  function createSVG() {
+    const svgNamespace = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNamespace, "svg");
+    svg.setAttribute("class", "faq-icon");
+    svg.setAttribute("width", "21");
+    svg.setAttribute("height", "20");
+    svg.setAttribute("viewBox", "0 0 33 32");
+    svg.setAttribute("fill", "none");
+
+    const path1 = document.createElementNS(svgNamespace, "path");
+    path1.setAttribute(
+      "d",
+      "M16.5 28C23.1274 28 28.5 22.6274 28.5 16C28.5 9.37258 23.1274 4 16.5 4C9.87258 4 4.5 9.37258 4.5 16C4.5 22.6274 9.87258 28 16.5 28Z"
+    );
+    path1.setAttribute("stroke", "#21BA9E");
+    path1.setAttribute("stroke-width", "2");
+    path1.setAttribute("stroke-miterlimit", "10");
+    svg.appendChild(path1);
+
+    const path2 = document.createElementNS(svgNamespace, "path");
+    path2.setAttribute("d", "M21 14.5L16.5 19.5L12 14.5");
+    path2.setAttribute("stroke", "#21BA9E");
+    path2.setAttribute("stroke-width", "2");
+    path2.setAttribute("stroke-linecap", "round");
+    path2.setAttribute("stroke-linejoin", "round");
+    svg.appendChild(path2);
+
+    return svg;
+  }
+
+  // Append SVG to each afford-card-item
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    const icon = createSVG();
+    item.prepend(icon); // Prepend the SVG to each item
+  });
+});

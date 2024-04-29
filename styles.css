@@ -194,6 +194,99 @@ button:hover {
   margin-bottom: 30px;
 }
 
+/* Affordable Energy --------------------------------------------------------  */
+
+.afford {
+  position: relative;
+}
+
+.afford-body {
+  padding-left: 112px;
+  padding-right: 112px;
+}
+
+.afford-image {
+  background-image: url("images/img-affordable-energy.jpg");
+  height: 50vh;
+}
+
+.afford-text {
+  padding-right: 400px;
+}
+
+.afford-card-container {
+  padding: 30px;
+}
+
+.afford-card {
+  position: absolute;
+  right: 70px;
+  bottom: 80px;
+  z-index: 1;
+
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid rgb(221, 212, 212);
+  width: 350px;
+  height: 250px;
+}
+
+.afford-card-title {
+  text-transform: uppercase;
+}
+
+.afford-card-items {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.afford-card-item {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.afford-icon {
+  margin-right: 4px;
+}
+
+.afford-card-btn {
+  font-weight: bold;
+  width: 100%;
+}
+
+/* FAQ --------------------------------------------------------  */
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-items {
+  width: 70vw;
+}
+
+.faq-item {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: white;
+  border: 1px solid rgb(221, 212, 212);
+  padding: 6px;
+  width: 100%;
+}
+
+.faq-icon {
+  min-width: 21px;
+  min-height: 20px;
+}
+
 /* Footer --------------------------------------------------------  */
 
 .custom-footer {
@@ -320,6 +413,41 @@ button:hover {
   .services-button-container {
     display: block;
     justify-content: center;
+  }
+
+  /* Affordable Energy -------------------------------------------------------- */
+
+  .afford {
+    position: relative;
+  }
+
+  .afford-body {
+    padding: 30px;
+  }
+
+  .afford-image {
+    background-image: url("images/img-affordable-energy.jpg");
+    height: 50vh;
+  }
+
+  .afford-text {
+    padding-right: 0px;
+  }
+
+  .afford-card-container {
+    padding: 30px;
+    margin-left: 25px;
+    margin-top: 80px;
+  }
+
+  .afford-card {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid rgb(221, 212, 212);
+    width: 300px;
+    height: 250px;
   }
 
   /* Footer -------------------------------------------------------- */
