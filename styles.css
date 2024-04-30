@@ -12,14 +12,38 @@ p {
   color: #515151;
 }
 
+/* Navbar  -------------------------------------------------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-right {
+  color: #515151;
+}
+
+.nav-left div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 /* Banner  -------------------------------------------------------- */
 
 .banner {
   position: relative;
   height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .background-image {
@@ -34,6 +58,42 @@ p {
   background-size: cover;
   filter: brightness(50%);
   z-index: 1;
+}
+
+.banner-nav {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.banner-nav-items {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.banner-nav-items-mid {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  color: rgb(214, 214, 214);
+}
+
+.banner-nav-items-btn {
+  background-color: gray;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
@@ -275,10 +335,23 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.faq-item-cont {
   background-color: white;
   border: 1px solid rgb(221, 212, 212);
   padding: 6px;
-  width: 100%;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-bottom: 6px;
+}
+
+.faq-ans {
+  font-size: 13px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
 }
 
 .faq-icon {
@@ -356,10 +429,55 @@ button:hover {
   color: white;
 }
 
+/* Footer Second Half -------------------------------------------------------- */
+
+.custom-footer2 {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.line3 {
+  color: rgb(214, 214, 214);
+}
+
+.line4 {
+  color: rgb(214, 214, 214);
+  display: flex;
+  gap: 120px;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.line2, .line4 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 /* Responsive -------------------------------------------------------- */
 
-/* Smartphones (portrait) */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 1024px) {
+  /* Navs -------------------------------------------------------- */
+
+  .navbar,
+  .banner-nav {
+    display: none;
+  }
+
+  .banner {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   /* Text Section -------------------------------------------------------- */
 
   .image-content {
@@ -426,7 +544,10 @@ button:hover {
 
   .afford-image {
     background-image: url("images/img-affordable-energy.jpg");
-    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
   }
 
   .afford-text {

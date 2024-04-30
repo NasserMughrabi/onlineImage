@@ -11,6 +11,48 @@ document.getElementById("toggleButton").addEventListener("click", function () {
   }
 });
 
+// Expand/Collapse functionality for FAQ
+document.getElementById("faq1").addEventListener("click", function () {
+  var answer = document.getElementById("faq1-ans");
+  if (answer.classList.contains("hidden")) {
+    answer.classList.remove("hidden");
+  } else {
+    answer.classList.add("hidden");
+  }
+});
+document.getElementById("faq2").addEventListener("click", function () {
+  var answer = document.getElementById("faq2-ans");
+  if (answer.classList.contains("hidden")) {
+    answer.classList.remove("hidden");
+  } else {
+    answer.classList.add("hidden");
+  }
+});
+document.getElementById("faq3").addEventListener("click", function () {
+  var answer = document.getElementById("faq3-ans");
+  if (answer.classList.contains("hidden")) {
+    answer.classList.remove("hidden");
+  } else {
+    answer.classList.add("hidden");
+  }
+});
+document.getElementById("faq4").addEventListener("click", function () {
+  var answer = document.getElementById("faq4-ans");
+  if (answer.classList.contains("hidden")) {
+    answer.classList.remove("hidden");
+  } else {
+    answer.classList.add("hidden");
+  }
+});
+document.getElementById("faq5").addEventListener("click", function () {
+  var answer = document.getElementById("faq5-ans");
+  if (answer.classList.contains("hidden")) {
+    answer.classList.remove("hidden");
+  } else {
+    answer.classList.add("hidden");
+  }
+});
+
 // See Less/More functionality for services on mobile screens
 document
   .getElementById("servicesToggleButton")
@@ -194,6 +236,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Prepend SVG to each afford-card-item
   document.querySelectorAll(".faq-item").forEach((item) => {
     const icon = createSVG();
-    item.prepend(icon); 
+    item.prepend(icon);
   });
 });
